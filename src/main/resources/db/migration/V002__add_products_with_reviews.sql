@@ -1,18 +1,18 @@
 -- Insert a user
-INSERT INTO users (id, first_name, last_name, email, created_date, modified_date)
-VALUES (1, 'John', 'Doe', 'john.doe@example.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO users (first_name, last_name, email, created_date, modified_date)
+VALUES ('John', 'Doe', 'john.doe@example.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert products
-INSERT INTO products (id, code, name, price_eur, price_usd, description, created_date, modified_date)
+INSERT INTO products (code, name, price_eur, price_usd, description, created_date, modified_date)
 VALUES
-    (1, 'PROD00000000001', 'iPhone 12', 800.00, 950.00, 'Apple iPhone 12 with 64GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-    (2, 'PROD00000000002', 'iPhone 12 Pro', 1000.00, 1200.00, 'Apple iPhone 12 Pro with 128GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-    (3, 'PROD00000000003', 'Samsung Galaxy S21', 850.00, 1000.00, 'Samsung Galaxy S21 with 128GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-    (4, 'PROD00000000004', 'Samsung Galaxy Note 20', 950.00, 1125.00, 'Samsung Galaxy Note 20 with 256GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-    (5, 'PROD00000000005', 'Huawei P40 Pro', 700.00, 830.00, 'Huawei P40 Pro with 256GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-    (6, 'PROD00000000006', 'Huawei Mate 40 Pro', 1100.00, 1300.00, 'Huawei Mate 40 Pro with 256GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-    (7, 'PROD00000000007', 'iPhone 13', 900.00, 1050.00, 'Apple iPhone 13 with 128GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-    (8, 'PROD00000000008', 'Samsung Galaxy S20 FE', 600.00, 700.00, 'Samsung Galaxy S20 FE with 128GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+    ('PROD00000000001', 'iPhone 12', 800.00, 950.00, 'Apple iPhone 12 with 64GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('PROD00000000002', 'iPhone 12 Pro', 1000.00, 1200.00, 'Apple iPhone 12 Pro with 128GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('PROD00000000003', 'Samsung Galaxy S21', 850.00, 1000.00, 'Samsung Galaxy S21 with 128GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('PROD00000000004', 'Samsung Galaxy Note 20', 950.00, 1125.00, 'Samsung Galaxy Note 20 with 256GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('PROD00000000005', 'Huawei P40 Pro', 700.00, 830.00, 'Huawei P40 Pro with 256GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('PROD00000000006', 'Huawei Mate 40 Pro', 1100.00, 1300.00, 'Huawei Mate 40 Pro with 256GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('PROD00000000007', 'iPhone 13', 900.00, 1050.00, 'Apple iPhone 13 with 128GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+    ('PROD00000000008', 'Samsung Galaxy S20 FE', 600.00, 700.00, 'Samsung Galaxy S20 FE with 128GB storage', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Insert reviews
 -- iPhone 12 Reviews

@@ -1,6 +1,7 @@
-package tis.productReview.product.list;
+package tis.productReview.product.list.search;
 
 public class SearchProductDTO {
+
     private String code;
     private String name;
 

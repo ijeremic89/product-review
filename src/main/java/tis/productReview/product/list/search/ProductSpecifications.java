@@ -1,4 +1,4 @@
-package tis.productReview.product.list;
+package tis.productReview.product.list.search;
 
 import org.springframework.data.jpa.domain.Specification;
 

@@ -16,7 +16,8 @@ import tis.productReview.product.create.CreateProductDTO;
 import tis.productReview.product.create.CreateProductService;
 import tis.productReview.product.create.CreateProductServiceImpl;
 import tis.productReview.product.list.ListProductsService;
-import tis.productReview.product.list.SearchProductDTO;
+import tis.productReview.product.list.popular.ResponsePopularProductsDTO;
+import tis.productReview.product.list.search.SearchProductDTO;
 
 @RestController
 @RequestMapping("/product")
@@ -38,6 +39,11 @@ public class ProductController {
 
     @GetMapping("/search")
     public ResponseEntity<List<ResponseProductDTO>> searchProducts(@RequestBody SearchProductDTO searchProductDTO) {
-        return new ResponseEntity<>(listProductsService.getProductsBySearchParameters(searchProductDTO), HttpStatus.FOUND);
+        return new ResponseEntity<>(listProductsService.getProductsBySearchParameters(searchProductDTO), HttpStatus.OK);
+    }
+
+    @GetMapping("/mostPopular")
+    public ResponseEntity<ResponsePopularProductsDTO> getPopularProducts() {
+        return new ResponseEntity<>(listProductsService.getPopularProducts(), HttpStatus.OK);
     }
 }

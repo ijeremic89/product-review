@@ -1,15 +1,19 @@
 package tis.productReview.product;
 
 import java.math.BigDecimal;
+import java.util.Set;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import tis.productReview.review.ReviewEntity;
 import tis.productReview.shared.BaseEntity;
 
 @Entity
 @Table(name = "products")
 public class ProductEntity extends BaseEntity {
+
     @Column(name = "code", length = 15, unique = true, nullable = false)
     private String code;
 
@@ -24,6 +28,9 @@ public class ProductEntity extends BaseEntity {
 
     @Column(name = "description")
     private String description;
+
+    @OneToMany(mappedBy = "product")
+    private Set<ReviewEntity> reviews;
 
     public ProductEntity() {
     }
@@ -66,5 +73,13 @@ public class ProductEntity extends BaseEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Set<ReviewEntity> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(Set<ReviewEntity> reviews) {
+        this.reviews = reviews;
     }
 }

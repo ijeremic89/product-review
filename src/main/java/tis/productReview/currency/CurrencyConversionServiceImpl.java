@@ -39,14 +39,13 @@ public class CurrencyConversionServiceImpl implements CurrencyConversionService 
         CurrencyRateDTO currencyRateDTO = getCurrency(convertedCurrency);
         BigDecimal exchangeRate;
         try {
-            exchangeRate = new BigDecimal(currencyRateDTO.getSrednji_tecaj().replace(",", "."))
-                .setScale(2, RoundingMode.HALF_UP);
+            exchangeRate = new BigDecimal(currencyRateDTO.getSrednji_tecaj().replace(",", "."));
         } catch (NumberFormatException ex) {
             log.error("Error parsing exchange rate: " + currencyRateDTO.getSrednji_tecaj(), ex);
             throw new IllegalArgumentException("Invalid exchange rate received from API.");
         }
 
-        return amountEur.multiply(exchangeRate);
+        return amountEur.multiply(exchangeRate).setScale(2, RoundingMode.HALF_UP);
     }
 
     private CurrencyRateDTO getCurrency(String currency) {

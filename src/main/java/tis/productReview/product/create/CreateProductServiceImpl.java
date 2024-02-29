@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import tis.productReview.currency.Currency;
 import tis.productReview.currency.CurrencyConversionService;
-import tis.productReview.currency.CurrencyConversionServiceImpl;
 import tis.productReview.mapper.ProductMapper;
 import tis.productReview.product.ProductEntity;
 import tis.productReview.product.ProductRepository;
@@ -25,7 +24,7 @@ public class CreateProductServiceImpl implements CreateProductService {
     @Autowired
     public CreateProductServiceImpl(
         ProductRepository productRepository,
-        CurrencyConversionServiceImpl currencyConversionService,
+        CurrencyConversionService currencyConversionService,
         CreateProductValidator createProductValidator) {
         this.productRepository = productRepository;
         this.currencyConversionService = currencyConversionService;

@@ -9,7 +9,6 @@ import jakarta.validation.constraints.Size;
 
 public class CreateProductDTO {
 
-    @NotBlank(message = "Product code is required")
     @Size(max = 15, min = 15, message = "Product code must be 15 characters long")
     private String code;
 
